@@ -1,5 +1,10 @@
 .gradle/
 build/
+!build/
+build/*
+!build/distributions/
+build/distributions/*
+!build/distributions/*.zip
 out/
 .idea/
 .intellijPlatform/
