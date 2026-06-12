@@ -87,13 +87,21 @@ gradle buildPlugin
 build/distributions/
 ```
 
+仓库已包含打包好的插件包：
+
+```text
+build/distributions/idea-code-location-copier-1.0.3.zip
+```
+
+不需要本地构建时，可以直接下载该 zip 安装。
+
 安装方式：
 
 ```text
 Settings | Plugins | Install Plugin from Disk...
 ```
 
-选择上面的 zip 文件。
+选择上面的 zip 文件，或选择从 GitHub 下载的 `idea-code-location-copier-1.0.3.zip`。
 
 ## 快捷键不生效排查
 
