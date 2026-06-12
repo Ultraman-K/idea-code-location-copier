@@ -2,7 +2,7 @@
 
 ## 痛点
 
-在 IDEA 之外使用 AI Agent 工具（如 Claude Code、Cursor、Copilot Chat 等）时，一个高频痛点：**你在 IDE 里选中了一段代码想让 Agent 分析，但 Agent 无法感知你在 IDEA 中的光标位置和选区**。你只能手动描述"帮我看看 UserService.java 第 128 行附近的方法"，或者复制代码片段过去，但 Agent 不知道这段代码来自哪个文件、哪一行。
+在 IDEA 之外使用 AI Agent 工具（如 Codex、Copilot Chat 等）时，一个高频痛点：**你在 IDE 里选中了一段代码想让 Agent 分析，但 Agent 无法感知你在 IDEA 中的光标位置和选区**。你只能手动描述"帮我看看 UserService.java 第 128 行附近的方法"，或者复制代码片段过去，但 Agent 不知道这段代码来自哪个文件、哪一行。
 
 这个插件就是把当前光标/选区的位置信息（`类全限定名:起止行号`）一键复制到剪贴板，粘贴给外部 Agent 即可让 Agent 精确定位代码位置。
 
