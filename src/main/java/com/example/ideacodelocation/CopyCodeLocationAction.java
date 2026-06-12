@@ -26,7 +26,7 @@ import java.util.Deque;
 /**
  * 复制当前 Java 代码位置，便于在代码评审、飞书、Jira、PR 中引用。
  *
- * @author 孟祥宇
+ * @author Ultraman-K
  */
 public class CopyCodeLocationAction extends AnAction implements IntentionAction {
 
@@ -95,7 +95,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 从选区计算 1-based 行号；无选区时取当前光标行。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static LineRange resolveLineRange(Editor editor) {
         Document document = editor.getDocument();
@@ -118,7 +118,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 取选区起点或光标位置，用于定位当前 PSI 类。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static int resolveTargetOffset(Editor editor) {
         if (editor.getSelectionModel().hasSelection()) {
@@ -130,7 +130,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 优先使用 PSI 获取包名和类名，不读取源码文本。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static String resolveQualifiedClassName(PsiFile psiFile, int offset) {
         String packageName = resolvePackageName(psiFile);
@@ -147,7 +147,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 使用 Java PSI 文件对象读取包名。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static String resolvePackageName(PsiFile psiFile) {
         if (psiFile instanceof PsiJavaFile) {
@@ -159,7 +159,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 优先取光标/选区所在类；不在类体内时，回退到文件中的第一个类。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static String resolveClassName(PsiFile psiFile, int offset) {
         PsiElement element = psiFile.findElementAt(Math.max(0, Math.min(offset, psiFile.getTextLength())));
@@ -178,7 +178,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 保留嵌套类层级，避免引用 Inner 时丢失 Outer 背景。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static String buildJavaClassName(PsiClass psiClass) {
         if (psiClass == null) {
@@ -199,7 +199,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 单行输出 package.Class:128，多行输出 package.Class:128-147。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static String formatLocation(String qualifiedClassName, LineRange lineRange) {
         if (lineRange.startLine == lineRange.endLine) {
@@ -211,7 +211,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 仅在 Java 文件中启用 Action。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static boolean isSupportedFile(PsiFile psiFile) {
         return psiFile instanceof PsiJavaFile;
@@ -220,7 +220,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
     /**
      * 选区行号范围。
      *
-     * @author 孟祥宇
+     * @author Ultraman-K
      */
     private static class LineRange {
         private final int startLine;
