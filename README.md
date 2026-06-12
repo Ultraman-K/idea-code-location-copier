@@ -62,7 +62,7 @@ Settings | Keymap | 搜索 Copy Class Location
 如果复制出来是这种格式：
 
 ```text
-com/ke/estuary/hhr/controller/bill/BillController.java:199
+com/example/service/UserService.java:128
 ```
 
 说明触发的是 IDEA 内置 `Copy Reference`，不是这个插件 Action。请确认快捷键绑定到 `Copy Class Location`。
@@ -136,7 +136,7 @@ Help | Find Action
 如果复制结果是：
 
 ```text
-com/ke/estuary/hhr/controller/bill/BillController.java:199
+com/example/service/UserService.java:128
 ```
 
 说明触发的是 IDEA 内置 `Copy Reference`，不是本插件。
