@@ -5,3 +5,8 @@ out/
 .intellijPlatform/
 .DS_Store
 *.iml
+
+AGENTS.md
+CLAUDE.md
+.codex/
+.agents/
