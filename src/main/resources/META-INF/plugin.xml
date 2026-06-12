@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.example.ideacodelocation</id>
+    <name>Code Location Copier</name>
+    <vendor email="dev@example.com">Example</vendor>
+
+    <description>
+        Copies the current Java class location as package.Class:line or package.Class:start-end.
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <actions>
+        <action id="CodeLocationCopier.CopyClassLocation"
+                class="com.example.ideacodelocation.CopyCodeLocationAction"
+                text="Copy Class Location"
+                description="Copy qualified class name and selected line range">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift L"/>
+        </action>
+    </actions>
+</idea-plugin>
