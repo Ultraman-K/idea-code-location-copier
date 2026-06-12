@@ -55,12 +55,12 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
 
     @Override
     public @Nls @NotNull String getText() {
-        return "Copy Class Location";
+        return "Copy Code Location";
     }
 
     @Override
     public @Nls @NotNull String getFamilyName() {
-        return "Copy Class Location";
+        return "Copy Code Location";
     }
 
     @Override
@@ -83,7 +83,7 @@ public class CopyCodeLocationAction extends AnAction implements IntentionAction 
         int targetOffset = resolveTargetOffset(editor);
         String qualifiedClassName = resolveQualifiedClassName(psiFile, targetOffset);
         if (qualifiedClassName == null) {
-            Messages.showWarningDialog(project, "当前文件没有找到 Java 类。", "Copy Class Location");
+            Messages.showWarningDialog(project, "当前文件没有找到 Java 类。", "Copy Code Location");
             return;
         }
 

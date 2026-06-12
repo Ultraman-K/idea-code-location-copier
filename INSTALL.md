@@ -16,7 +16,7 @@
 
 ### 右键菜单
 
-选中代码后右键 → `Copy Class Location`
+选中代码后右键 → `Copy Code Location`
 
 ### 复制结果
 
@@ -41,12 +41,12 @@ com.example.service.UserService:128-147
 1. 选中任意代码，等浮动工具栏出现
 2. 点击工具栏右侧的 `⋮`（三个点）
 3. 选择 `Customize Toolbar...`
-4. 在弹出的窗口中搜索 `Copy Class Location`
+4. 在弹出的窗口中搜索 `Copy Code Location`
 5. 点击 `OK`
 
 ## 5. 自定义快捷键
 
-`Settings | Keymap` → 搜索 `Copy Class Location` → 右键添加自定义快捷键
+`Settings | Keymap` → 搜索 `Copy Code Location` → 右键添加自定义快捷键
 
 ## 6. 常见问题
 
@@ -54,9 +54,9 @@ com.example.service.UserService:128-147
 
 1. 重新打包安装新版：`gradle buildPlugin`
 2. 重启 IDEA
-3. `Settings | Keymap` → 搜索 `Copy Class Location` → 确认快捷键绑定正确
-4. 删除旧的 `Copy Code Location` 绑定（如有）
+3. `Settings | Keymap` → 搜索 `Copy Code Location` → 确认快捷键绑定正确
+4. 删除冲突的旧快捷键绑定（如有）
 
 ### 复制结果格式不对
 
-如果复制出来是 `com/example/service/UserService.java:128` 这种格式，说明触发的是 IDEA 内置的 `Copy Reference`，不是本插件。请确认快捷键绑定到 `Copy Class Location`。
+如果复制出来是 `com/example/service/UserService.java:128` 这种格式，说明触发的是 IDEA 内置的 `Copy Reference`，不是本插件。请确认快捷键绑定到 `Copy Code Location`。

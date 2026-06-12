@@ -11,9 +11,9 @@
     <depends>com.intellij.java</depends>
 
     <actions>
-        <action id="CodeLocationCopier.CopyClassLocation"
+        <action id="CodeLocationCopier.CopyCodeLocation"
                 class="com.example.ideacodelocation.CopyCodeLocationAction"
-                text="Copy Class Location"
+                text="Copy Code Location"
                 description="Copy qualified class name and selected line range">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift L"/>

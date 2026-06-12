@@ -41,9 +41,9 @@ com.xxx.service.UserService:128
 <depends>com.intellij.java</depends>
 
 <actions>
-    <action id="CodeLocationCopier.CopyClassLocation"
+    <action id="CodeLocationCopier.CopyCodeLocation"
             class="com.example.ideacodelocation.CopyCodeLocationAction"
-            text="Copy Class Location"
+            text="Copy Code Location"
             description="Copy qualified class name and selected line range">
         <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift L"/>
@@ -54,7 +54,7 @@ com.xxx.service.UserService:128
 默认快捷键是 `Ctrl + Alt + Shift + L`。也可以在 IDEA：
 
 ```text
-Settings | Keymap | 搜索 Copy Class Location
+Settings | Keymap | 搜索 Copy Code Location
 ```
 
 重新绑定。
@@ -65,7 +65,7 @@ Settings | Keymap | 搜索 Copy Class Location
 com/example/service/UserService.java:128
 ```
 
-说明触发的是 IDEA 内置 `Copy Reference`，不是这个插件 Action。请确认快捷键绑定到 `Copy Class Location`。
+说明触发的是 IDEA 内置 `Copy Reference`，不是这个插件 Action。请确认快捷键绑定到 `Copy Code Location`。
 
 ## 本地运行
 
@@ -121,17 +121,17 @@ Settings | Keymap
 4. 搜索：
 
 ```text
-Copy Class Location
+Copy Code Location
 ```
 
-5. 只给这个 Action 绑定快捷键，删除旧的 `Copy Code Location` 绑定。
+5. 只给这个 Action 绑定快捷键，删除冲突的旧快捷键绑定。
 6. 用：
 
 ```text
 Help | Find Action
 ```
 
-搜索并执行 `Copy Class Location`。如果这里能复制，说明插件正常，问题只在快捷键冲突。
+搜索并执行 `Copy Code Location`。如果这里能复制，说明插件正常，问题只在快捷键冲突。
 
 如果复制结果是：
 
